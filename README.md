@@ -24,4 +24,4 @@ Build OpenWrt using GitHub Actions
 
 ## License
 
-[MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/main/LICENSE)
+[MIT](https://github.com/m1911/OpenWrt-Build/blob/main/LICENSE)
