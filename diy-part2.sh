@@ -13,4 +13,13 @@
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.18.1/g' package/base-files/files/bin/config_generate
 sed -i 's/0.0.0.0:80/0.0.0.0:8088/g' package/network/services/uhttpd/files/uhttpd.config
+cat >> package/network/config/firewall/files/firewall.config<< EOF
+
+config rule
+        option src 'wan'
+        option target 'ACCEPT'
+        option proto 'tcp'
+        option dest_port '8088'
+        option name 'httpdwan'
+EOF
 #sed -i 's/192.168/10.0/g' package/base-files/files/bin/config_generate
