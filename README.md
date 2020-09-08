@@ -1,6 +1,9 @@
 # Actions-OpenWrt
 
-Build OpenWrt using GitHub Actions
+自编译OpenWrt固件（固件是用在Proxmox VE两个IP开nat小鸡用的）
+本固件只有基础上网功能，没有其他第三方插件。
+
+
 
 [Read the details in my blog (in Chinese) | 中文教程](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
 
