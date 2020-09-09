@@ -26,6 +26,24 @@ config rule
         option proto 'tcp'
         option dest_port '8088'
         option name 'httpdwan'
+
+config rule
+        option name 'http80'
+        option src 'wan'
+        option src_port '80'
+        option dest 'lan'
+        list dest_ip '192.168.18.1'
+        option dest_port '80'
+        option target 'ACCEPT'
+
+config rule
+        option name 'http443'
+        option src 'wan'
+        option src_port '443'
+        option dest 'lan'
+        list dest_ip '192.168.18.1'
+        option dest_port '443'
+        option target 'ACCEPT'
 EOF
 cat >> package/base-files/files/etc/sysctl.conf<< EOF
 net.netfilter.nf_conntrack_max=65535
